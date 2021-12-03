@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(){
         todo.append(span)
         list_element.prepend(todo)
       }
-      
+      inContent.value = ""
     });
     
     
