@@ -8,17 +8,30 @@ document.addEventListener("DOMContentLoaded", function(){
     if (e.target.nodeName == "SPAN"){
       e.target.parentNode.remove()
     }; 
+    
   })
+
+    const inContent =document.querySelector("#input")
+    const xbtn = document.querySelector('.addBtn')
+
+    xbtn.addEventListener('click', ()=> {
+      if (inContent.value !== ""){
+        const todo = document.createElement('li')
+        const span = document.createElement('span')
+        span.innerText = 'x'
+        span.className ='close'
+        const liContent = inContent.value
+        todo.innerHTML = liContent
+        todo.append(span)
+        list_element.prepend(todo)
+      }
+      
+    });
+    
     
   })
   
-  //const xbtn = document.querySelector('.addBtn')
-  //xbtn.addEventListener("click", (e)=>{
-    //console.log(e) //e= the event we listen to
-  //})
-  //}) 
-  
-      
+ 
 
 
 //for(var i = 0; i < list_element.length; i++) {
